@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className="bigelow-navbar">
-            Bigelow
             <ul>
                 <li>
                     <Link to="/">Home</Link>

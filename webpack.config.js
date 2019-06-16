@@ -28,60 +28,32 @@ module.exports = {
                 resolve: {
                     extensions: ['.js', '.jsx']
                 },
-                use: [
-                    {
-                        loader: 'babel-loader',
-                    },
-                ],
+                use: ['babel-loader'],
             },
             // html files
             {
                 test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-loader',
-                    },
-                ],
+                use: ['html-loader'],
             },
             // css and scss files
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                    },
-                    {
-                        loader: 'css-loader',
-                    },
-                ],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.scss$/,
-                use: [
-                    {
-                        loader: 'style-loader',
-                    },
-                    {
-                        loader: 'css-loader',
-                    },
-                    {
-                        loader: 'sass-loader',
-                    },
-                ],
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             // images and other files
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
+                use: ['file-loader'],
             }
         ]
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        // HtmlWebPackPlugin copies index.html from template in src to dist directory
         new HtmlWebPackPlugin({
             hash: true,
             inject: true,

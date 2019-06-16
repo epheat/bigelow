@@ -1,0 +1,9 @@
+.about-page {
+
+    img {
+        transition: transform 2s;
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}
