@@ -4,7 +4,7 @@ import Needle from 'Assets/space_needle.png';
 
 const Home = () => {
     return (
-        <div>
+        <div className="bigelow-home">
             <h1>Welcome to the bigelow homepage.</h1>
             <img src={Needle} />
         </div>
