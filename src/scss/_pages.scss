@@ -1,2 +1,8 @@
 @import './pages/about';
 @import './pages/home';
+
+.page-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px 8px;
+}
