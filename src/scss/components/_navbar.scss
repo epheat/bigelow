@@ -1,5 +1,5 @@
 .bigelow-navbar {
-    background-color: $light-offwhite;
+    background-color: $seafoam2;
     padding: 5px;
 
     ul {
@@ -9,6 +9,18 @@
 
         li {
             display: block;
+
+            a {
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.2em;
+                color: $seafoam3;
+                text-decoration: none;
+
+                &.selected {
+                    color: $red;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }

@@ -38,6 +38,16 @@ class Home extends React.Component {
                         We hope you enjoy your stay. Click on the title to change the hero image.
                     </p>
                     <p>
+                        Eventually this site is going to have a bunch of cool stuff on here but for now its just a plain static site.
+                    </p>
+                    <div className="flex-container">
+                        <div className="bigelow-circle" />
+                        <div className="bigelow-circle" />
+                        <div className="bigelow-circle" />
+                        <div className="bigelow-circle" />
+                        <div className="bigelow-circle" />
+                    </div>
+                    <p>
                         © 2019 Bigelow Boys
                     </p>
                 </div>
