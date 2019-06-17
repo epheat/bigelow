@@ -4,9 +4,9 @@ const dynamodb = new AWS.DynamoDB({
     apiVersion: '2012-08-10'
 });
 const middy = require('middy');
-const { cors } = require('middy/middleware');
+const { cors } = require('middy/middlewares');
 
-const bWord = async (event, context, callback) => {
+const bWord = (event, context, callback) => {
     // do some alexa stuff
     const user = event.request.intent.slots.User.value;
     const word = event.request.intent.slots.Bword.value;
@@ -60,7 +60,7 @@ const bWord = async (event, context, callback) => {
     });
 };
 
-const doBigelow = async (event, context, callback) => {
+const doBigelow = (event, context, callback) => {
 
     var params = {
         TableName: 'Bigelow_Boys'
