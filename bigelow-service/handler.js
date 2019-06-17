@@ -11,6 +11,33 @@ const bWord = (event, context, callback) => {
     const user = event.request.intent.slots.User.value;
     const word = event.request.intent.slots.Bword.value;
 
+    let response = {
+        version: '1.0',
+        response: {
+            outputSpeech: {
+                type: 'PlainText',
+                text: `Something  might have gone wrong. Did not update user ${user} to word ${word}.`,
+            },
+            shouldEndSession: true,
+        },
+    };
+
+    if (word && word.toLowerCase().charAt(0) != "b") {
+        response = {
+            version: '1.0',
+            response: {
+                outputSpeech: {
+                    type: 'PlainText',
+                    text: `${user}, The word, ${word}, does not start with the letter B. Please choose another word.`
+                },
+                shouldEndSession: true,
+            },
+        };
+        callback(null, response);
+        return;
+    }
+
+
     const params = {
         TableName: 'Bigelow_Boys',
         Item: {
@@ -21,7 +48,7 @@ const bWord = (event, context, callback) => {
 
     dynamodb.putItem(params, (err, data) => {
       
-        let response = {
+        response = {
             version: '1.0',
             response: {
                 outputSpeech: {
