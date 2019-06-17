@@ -54,9 +54,8 @@ module.exports.bWord = async (event, context, callback) => {
                 },
             };
         }
+        callback(null, response);
     })
-
-    callback(null, response);
 };
 
 module.exports.doBigelow = async (event) => {
@@ -71,7 +70,7 @@ module.exports.doBigelow = async (event) => {
     let statusCode;
 
 
-    ddb.scan(params, (err, data) => {
+    dynamodb.scan(params, (err, data) => {
         if (err) {
             console.log("Error", err);
             statusCode = 500;
@@ -86,14 +85,14 @@ module.exports.doBigelow = async (event) => {
                 });
             });
         }
-    });
 
-    return {
-        statusCode: statusCode,
-        body: JSON.stringify({
-            message: message,
-            words: words,
-            input: event,
-        }, null, 2),
-    };
+        return {
+            statusCode: statusCode,
+            body: JSON.stringify({
+                message: message,
+                words: words,
+                input: event,
+            }, null, 2),
+        };
+    });
 };
