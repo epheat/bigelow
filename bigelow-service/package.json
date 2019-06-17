@@ -2,9 +2,12 @@
   "name": "bigelow-service",
   "description": "",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "aws-sdk": "^2.476.0",
+    "middy": "^0.27.0"
+  },
   "devDependencies": {
     "serverless": "^1.45.1",
-    "serverless-offline": "^5.3.3",
+    "serverless-offline": "^5.3.3"
   }
 }
