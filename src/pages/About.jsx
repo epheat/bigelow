@@ -22,11 +22,19 @@ class About extends React.Component {
 
     componentDidMount() {
         axios.get(BIGELOW_SERVICE_URL + DO_BIGELOW_PATH).then( response => {
-            // merge the array of words from API response with the local array of bigelow boys
-            // key this merge on the 'name' property, which should exist in both arrays
-            this.setState( prevState => ({
-                boys: mergeByName(prevState.boys, response.data.words)
-            }));
+            if (response.data.errorType == 'Error') {
+                console.log(response.data);
+                this.setState({
+                    error: true,
+                    errorMessage: response.data.errorMessage,
+                })    
+            } else {
+                // merge the array of words from API response with the local array of bigelow boys
+                // key this merge on the 'name' property, which should exist in both arrays
+                this.setState( prevState => ({
+                    boys: mergeByName(prevState.boys, response.data.words)
+                }));
+            }
         }).catch( err => {
             console.log(err);
             this.setState({
