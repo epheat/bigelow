@@ -6,4 +6,15 @@
             transform: rotate(360deg);
         }
     }
+
+    .bigelow-boys {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        
+        @media screen and (max-width: $break-small) {
+            grid-template-columns: 1fr;
+        }
+    }
 }
