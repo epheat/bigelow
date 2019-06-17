@@ -60,7 +60,7 @@ plugins:
   - serverless-offline
 functions:
   hello:
-    handler: handler.do_bigelow
+    handler: handler.doBigelow
 
 #    Available events are defined here.
 #    https://serverless.com/framework/docs/providers/aws/events/
@@ -69,9 +69,10 @@ functions:
          path: /do-bigelow
          method: get
 
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
+  b_word:
+    handler: handler.bWord
+    events:
+      - alexaSkill: amzn1.ask.skill.92b8ba0c-1fcb-45ae-9fcc-34f6d0f5f762
 
 # you can add CloudFormation resource templates here
 #resources:
