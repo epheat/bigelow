@@ -60,7 +60,7 @@ const bWord = (event, context, callback) => {
     });
 };
 
-const doBigelow = (event, context, callback) => {
+const doBigelow = async (event, context, callback) => {
 
     var params = {
         TableName: 'Bigelow_Boys'
@@ -69,35 +69,35 @@ const doBigelow = (event, context, callback) => {
     let words = [];
     let message = 'The hunter decides that the meal is not worth the fight.';
     let statusCode;
+    let result;
+    try {
+        result = await dynamodb.scan(params).promise();
+        statusCode = 200;
+    } catch (err) {
+        console.log("Error", err);
+        statusCode = 500;
+        message = 'Failed to retrieve words.';
+    }
 
-
-    dynamodb.scan(params, (err, data) => {
-        if (err) {
-            console.log("Error", err);
-            statusCode = 500;
-            message = 'Failed to retrieve words.';
-        } else {
-            statusCode = 200;
-            data.Items.forEach(function(element, index, array) {
-                console.log(element.name.S + " (" + element.word.S + ")");
-                words.push({
-                    name: element.name.S,
-                    word: element.word.S
-                });
-            });
-        }
-
-        const response = {
-            statusCode: statusCode,
-            body: JSON.stringify({
-                message: message,
-                words: words,
-                input: event,
-            }, null, 2),
-        }
-
-        callback(null, response);
+    result.Items.forEach(function(element, index, array) {
+        console.log(element.name.S + " (" + element.word.S + ")");
+        words.push({
+            name: element.name.S,
+            word: element.word.S
+        });
     });
+
+    const response = {
+        statusCode: statusCode,
+        body: JSON.stringify({
+            message: message,
+            words: words,
+            input: event,
+        }, null, 2),
+        headers: { 'Content-Type': 'application/json' },
+    }
+
+    return response;
 };
 
 const bWordHandler = middy(bWord);
