@@ -64,5 +64,8 @@ module.exports = {
             template: './src/index.html',
             filename: './index.html',
         }),
+        new webpack.DefinePlugin({
+            "DO_BIGELOW_PATH": JSON.stringify('/do-bigelow')
+        })
     ]
 };

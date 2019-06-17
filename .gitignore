@@ -5,4 +5,4 @@ dist/
 jspm_packages/
 
 # Serverless directories
-./bigelow-service/.serverless/
+/bigelow-service/.serverless

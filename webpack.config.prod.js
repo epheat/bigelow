@@ -36,7 +36,8 @@ module.exports = merge(baseConfig, {
             directory: './dist' // This is the directory you want to upload
         }),
         new webpack.DefinePlugin({
-            "process.env": dotenv.parsed
+            "process.env": dotenv.parsed,
+            "BIGELOW_SERVICE_URL": JSON.stringify('https://6wi0yq2lyk.execute-api.us-east-1.amazonaws.com/dev')
         })
     ]
 });
