@@ -51,7 +51,7 @@ class About extends React.Component {
                     { this.state.errorMessage }
                 </div>
                 <div className="page-content">
-                    <h1>About us</h1>
+                    <h1>A🅱️out us</h1>
                     <div className="bigelow-boys">
                         {
                             this.state.boys.map(boy => (
