@@ -2,3 +2,7 @@
 node_modules/
 dist/
 .env
+jspm_packages/
+
+# Serverless directories
+./bigelow-service/.serverless/
