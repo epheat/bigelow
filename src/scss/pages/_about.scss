@@ -1,5 +1,14 @@
 .about-page {
 
+    .error-banner {
+        visibility: hidden;
+        color: $red;
+
+        &.show {
+            visibility: visible;
+        }
+    }
+
     img {
         transition: transform 2s;
         &:hover {
@@ -12,7 +21,7 @@
         grid-gap: 20px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
-        
+
         @media screen and (max-width: $break-small) {
             grid-template-columns: 1fr;
         }
