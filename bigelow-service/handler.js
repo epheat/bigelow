@@ -3,33 +3,35 @@ const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB({
     apiVersion: '2012-08-10'
 });
+const middy = require('middy');
+const { cors } = require('middy/middleware');
 
-module.exports.bWord = async (event, context, callback) => {
+const bWord = async (event, context, callback) => {
     // do some alexa stuff
     const user = event.request.intent.slots.User.value;
     const word = event.request.intent.slots.Bword.value;
-    let response = {
-        version: '1.0',
-        response: {
-            outputSpeech: {
-                type: 'PlainText',
-                text: `did not update user ${user} to word ${word}.`,
-            },
-            shouldEndSession: true,
-        },
-    };;
 
-    dynamodb.putItem({
-        TableName: "Bigelow_Boys",
+    const params = {
+        TableName: 'Bigelow_Boys',
         Item: {
-            "name": {
-                S: user
-            },
-            "word": {
-                S: word
-            }
+            "name": { S: user },
+            "word": { S: word }
         }
-    }, (err, data) => {
+    }
+
+    dynamodb.putItem(params, (err, data) => {
+      
+        let response = {
+            version: '1.0',
+            response: {
+                outputSpeech: {
+                    type: 'PlainText',
+                    text: `did not update user ${user} to word ${word}.`,
+                },
+                shouldEndSession: true,
+            },
+        };
+
         if (err) {
             console.log(err, err.stack);
             response = {
@@ -55,11 +57,10 @@ module.exports.bWord = async (event, context, callback) => {
             };
         }
         callback(null, response);
-    })
+    });
 };
 
-module.exports.doBigelow = async (event) => {
-
+const doBigelow = async (event, context, callback) => {
 
     var params = {
         TableName: 'Bigelow_Boys'
@@ -86,13 +87,24 @@ module.exports.doBigelow = async (event) => {
             });
         }
 
-        return {
+        const response = {
             statusCode: statusCode,
             body: JSON.stringify({
                 message: message,
                 words: words,
                 input: event,
             }, null, 2),
-        };
+        }
+
+        callback(null, response);
     });
 };
+
+const bWordHandler = middy(bWord);
+bWordHandler.use(cors());
+
+const doBigelowHandler = middy(doBigelow);
+doBigelowHandler.use(cors());
+
+module.exports.bWord = bWordHandler;
+module.exports.doBigelow = doBigelowHandler;
