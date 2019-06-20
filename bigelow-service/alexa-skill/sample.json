@@ -1,0 +1,79 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": true,
+        "sessionId": "amzn1.echo-api.session.33d0269e-2909-448b-b1b6-68bcc13c8a98",
+        "application": {
+            "applicationId": "amzn1.ask.skill.92b8ba0c-1fcb-45ae-9fcc-34f6d0f5f762"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.AGM5B2HYFRBWEWOFZJ4FMUW3MYWM2R7FFU774YOGTB3XMFEHVYDQCJWISEDHI6PPWF5VZXHLZ53UEL65VOV2PIZOYE55OVTEYCT67L74VXBBEVJAYOT72J64WFV3SSOK47UKUCTGQ7YA4YYQCGSEYMMUCAB7RVIVXAPFCDE2LMPF5E4E4DVRV6XJFBUIO2OMRDTB67VO6LFDFMY"
+        }
+    },
+    "context": {
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.92b8ba0c-1fcb-45ae-9fcc-34f6d0f5f762"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.AGM5B2HYFRBWEWOFZJ4FMUW3MYWM2R7FFU774YOGTB3XMFEHVYDQCJWISEDHI6PPWF5VZXHLZ53UEL65VOV2PIZOYE55OVTEYCT67L74VXBBEVJAYOT72J64WFV3SSOK47UKUCTGQ7YA4YYQCGSEYMMUCAB7RVIVXAPFCDE2LMPF5E4E4DVRV6XJFBUIO2OMRDTB67VO6LFDFMY"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.AGBKWUYKOHL2TOJJD3YEQE6YYDL2Z5ROAOTY545WUIT44CMWZA6HOU3M5DBQIAF5FHLCN3RVDHIGFYYCSTZRKBCXQ5BBKDZQHM2IPIEN76WJFGFAPCLO2MRC6UXUF7S23KAJFEM6SHN63AN3AE25ZSRZNQJ2TUAXBFEPSOHWIZVTR72IXTG7M",
+                "supportedInterfaces": {}
+            },
+            "apiEndpoint": "https://api.amazonalexa.com",
+            "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjkyYjhiYTBjLTFmY2ItNDVhZS05ZmNjLTM0ZjZkMGY1Zjc2MiIsImV4cCI6MTU2MDc1NTIxMiwiaWF0IjoxNTYwNzU0OTEyLCJuYmYiOjE1NjA3NTQ5MTIsInByaXZhdGVDbGFpbXMiOnsiY29udGV4dCI6IkFBQUFBQUFBQUFEUjliUllsQW04dDE4ZC9SZjhTNmFES3dFQUFBQUFBQUJPamhiZ0VtSWFXL0pjUXhldDhjbld4YmxaQklTQzdnS2VKNFFCVGlvUTJaVzl6VkdqbUtJelB0bFVRUHE1TXJPNTdMcEJDdUZGN2h0WFUrNW1ubXB2SDl3MENkNUZENGJFUnhjQldNc3V5bDN0bWlZT3o3MGh5RmtpMmFiSXh0SWo2Q1hKWHFoYkxNYXR6cTBpZWIxZ1BtTE1xZmVLaUlQaGU2MzFBU3VVd1dLdmE2SmVrN0pVUEZZeXhlYUJTUDM4NWJaVE9maWZDZmczK2VjdU9yeHhBUDlISWx5ZStRaHJ2ZmRyS0h2QkgwczcvdWZtV2hBR256ZHNHRjBxd0c5d25xMlFmekwvLzdEQTJIODR6bEpaMEFxRWJYdHZyWVRGQzU0aVdia3lPTUlhMWZuTUhSbDgvd2FlbU1hRWtNc2Q5NC9uT1R1NzFGZld6bzBJdmQ4cEx1RHVZQTdRZklaS0VHNXVPSVlsY0I0Qnd2R0JtYnFzdm5qNXhLZ2hCVzhLR0NGbXZyUmFaM0YxY3c9PSIsImNvbnNlbnRUb2tlbiI6bnVsbCwiZGV2aWNlSWQiOiJhbXpuMS5hc2suZGV2aWNlLkFHQktXVVlLT0hMMlRPSkpEM1lFUUU2WVlETDJaNVJPQU9UWTU0NVdVSVQ0NENNV1pBNkhPVTNNNURCUUlBRjVGSExDTjNSVkRISUdGWVlDU1RaUktCQ1hRNUJCS0RaUUhNMklQSUVONzZXSkZHRkFQQ0xPMk1SQzZVWFVGN1MyM0tBSkZFTTZTSE42M0FOM0FFMjVaU1JaTlFKMlRVQVhCRkVQU09IV0laVlRSNzJJWFRHN00iLCJ1c2VySWQiOiJhbXpuMS5hc2suYWNjb3VudC5BR001QjJIWUZSQldFV09GWko0Rk1VVzNNWVdNMlI3RkZVNzc0WU9HVEIzWE1GRUhWWURRQ0pXSVNFREhJNlBQV0Y1VlpYSExaNTNVRUw2NVZPVjJQSVpPWUU1NU9WVEVZQ1Q2N0w3NFZYQkJFVkpBWU9UNzJKNjRXRlYzU1NPSzQ3VUtVQ1RHUTdZQTRZWVFDR1NFWU1NVUNBQjdSVklWWEFQRkNERTJMTVBGNUU0RTREVlJWNlhKRkJVSU8yT01SRFRCNjdWTzZMRkRGTVkifX0.TTqFIO9JCGn0e1I9pOt6v1rlCWTI2kIy68IDMHZ00NFmVHXCw3jAISRkelEI9bZY_VdZCIZ5KHcFgj-n2j5-zgcG3DkfaQY54BgiUhdWVM2yMU4wt99ouoQ6JaJ9Lcv4wvO8rr1qdDN-cxRNBTGezjydJ7uZDCGIV34cd1AD66bd2dqMgW2XVLa57oi9g5wMibEZOpSuyYMbKZfL40qktBlC7z-qw7l9rCha_IHEOMehEo11zCj3BT8rvSHjIeAEwwY5VcZLxDgKQM78cl9c-ttWx9AhPdTGoFo7K8XplioL6LgE_PDK7TMaxk6ovbZk22GeASK2vOqEBY0I6_bPCg"
+        },
+        "Viewport": {
+            "experiences": [
+                {
+                    "arcMinuteWidth": 246,
+                    "arcMinuteHeight": 144,
+                    "canRotate": false,
+                    "canResize": false
+                }
+            ],
+            "shape": "RECTANGLE",
+            "pixelWidth": 1024,
+            "pixelHeight": 600,
+            "dpi": 160,
+            "currentPixelWidth": 1024,
+            "currentPixelHeight": 600,
+            "touch": [
+                "SINGLE"
+            ],
+            "video": {
+                "codecs": [
+                    "H_264_42",
+                    "H_264_41"
+                ]
+            }
+        }
+    },
+    "request": {
+        "type": "IntentRequest",
+        "requestId": "amzn1.echo-api.request.c44a8862-5a36-447b-9f2c-b82d5e5df25e",
+        "timestamp": "2019-06-17T07:01:52Z",
+        "locale": "en-US",
+        "intent": {
+            "name": "UpdateBWord",
+            "confirmationStatus": "NONE",
+            "slots": {
+                "Bword": {
+                    "name": "Bword",
+                    "value": "banana",
+                    "confirmationStatus": "NONE",
+                    "source": "USER"
+                },
+                "User": {
+                    "name": "User",
+                    "value": "Scott",
+                    "confirmationStatus": "NONE",
+                    "source": "USER"
+                }
+            }
+        },
+        "dialogState": "COMPLETED"
+    }
+}
