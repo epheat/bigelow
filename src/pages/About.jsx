@@ -10,10 +10,10 @@ class About extends React.Component {
         super(props);
         this.state = {
             boys: [
-                { name: "Evan", image: Jack, description: "I like to code." },
-                { name: "Scott", image: Jack, description: "I have a dog." },
-                { name: "John", image: Jack, description: "I broke the dryer." },
-                { name: "Blake", image: Jack, description: "I live in the basement." },
+                { name: "Evan", image: Jack, description: "I drink milk.", color: { red: 100, green: 190, blue: 200 } },
+                { name: "Scott", image: Jack, description: "I have a dog.", color: { red: 240, green: 165, blue: 30 } },
+                { name: "John", image: Jack, description: "I broke the dryer.", color: { red: 69, green: 69*1.5, blue: 420/2 } },
+                { name: "Blake", image: Jack, description: "I live in the basement.", color: { red: 250, green: 235, blue: 20 }  },
             ],
             error: false,
             errorMessage: null,
