@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Jack from 'Assets/jack.gif';
 import BigelowBoy from '../components/BigelowBoy';
+import Baboosh from '../components/Baboosh';
 
 class About extends React.Component {
     constructor(props) {
@@ -51,7 +52,7 @@ class About extends React.Component {
                     { this.state.errorMessage }
                 </div>
                 <div className="page-content">
-                    <h1>A🅱️out us</h1>
+                    <h1>A<Baboosh />out us</h1>
                     <div className="bigelow-boys">
                         {
                             this.state.boys.map(boy => (

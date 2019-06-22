@@ -52,6 +52,13 @@ module.exports = {
                         publicPath: 'https://s3.amazonaws.com/bglw.org/my-dist/dist/'
                     }
                 }]
+            },
+            // mp3 files
+            {
+                test: /\.mp3$/i,
+                use: [{
+                    loader: 'url-loader'
+                }]
             }
         ]
     },
