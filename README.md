@@ -16,7 +16,7 @@ we use serverless for the bigelow backend. `npm install -g serverless`
 
 to run the backend locally, `cd` into the bigelow-service directory and run `npm install`. then, run `serverless offline`
 
-you need the right credentials to be able to run the lambda locally. Update your .env file with AWS credentials to your IAM user in scott's AWS account. TODO: more explanation on how to do this.
+you need the right credentials to be able to run the lambda locally. Update your .env file with AWS credentials to your IAM user in scott's AWS account in the same format as the .env.sample file.
 
 ### frontend
 
