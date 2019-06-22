@@ -8,6 +8,8 @@
   },
   "devDependencies": {
     "serverless": "^1.45.1",
+    "serverless-alexa-skills": "^0.1.0",
+    "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.3.3"
   }
 }
