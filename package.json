@@ -4,7 +4,8 @@
   "description": "bigelow website",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --env=dev",
+    "start": "concurrently \"webpack-dev-server --env=dev\" \"cd bigelow-service && serverless offline\"",
+    "dev": "webpack-dev-server --env=dev",
     "build": "webpack --env=prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +16,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "concurrently": "^4.1.0",
     "css-loader": "^3.0.0",
     "dotenv": "^8.0.0",
     "file-loader": "^4.0.0",
