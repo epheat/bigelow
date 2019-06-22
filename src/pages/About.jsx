@@ -3,8 +3,10 @@ import classNames from 'classnames';
 import axios from 'axios';
 
 import Jack from 'Assets/jack.gif';
+import Cheer from 'Assets/christmas_cheers.jpg'
 import BigelowBoy from '../components/BigelowBoy';
 import Baboosh from '../components/Baboosh';
+import BigelowHero from '../components/BigelowHero';
 
 class About extends React.Component {
     constructor(props) {
@@ -18,13 +20,15 @@ class About extends React.Component {
             ],
             error: false,
             errorMessage: null,
+            images: [
+                Cheer
+            ]
         }
     }
 
     componentDidMount() {
         axios.get(BIGELOW_SERVICE_URL + DO_BIGELOW_PATH).then( response => {
             if (response.data.errorType == 'Error') {
-                console.log(response.data);
                 this.setState({
                     error: true,
                     errorMessage: response.data.errorMessage,
@@ -48,6 +52,10 @@ class About extends React.Component {
     render() {
         return (
             <div className="about-page">
+                <BigelowHero
+                    images={this.state.images}
+                    showIndex={0}
+                />
                 <div className={classNames('error-banner', { show: this.state.error })}>
                     { this.state.errorMessage }
                 </div>

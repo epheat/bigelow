@@ -1,7 +1,7 @@
 .bigelow-home {
 
     .page-content {
-        padding: 5px 8px;
+        padding: 5px 20px;
         background-color: $seafoam1;
         border-style: solid;
         border-color: $red;
@@ -21,8 +21,11 @@
         font-size: 4em;
     }
     p {
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 1.5em;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 1.2em;
+        @media screen and (max-width: $break-small) {
+            font-size: 1.1em;
+        }
     }
 
     .flex-container {

@@ -1,5 +1,10 @@
 @import './pages/about';
 @import './pages/home';
+@import './pages/events';
+
+.page-container {
+    position: absolute;
+}
 
 .page-content {
     max-width: 1000px;
@@ -11,3 +16,21 @@
     display: flex;
     justify-content: space-around;
 }
+
+// Transitions for "fade" transition group
+.fade-enter {
+    opacity: 0.01;
+}
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 1s;
+}
+.fade-exit {
+    opacity: 1;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 1s;
+}
+
