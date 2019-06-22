@@ -10,6 +10,8 @@ first, go to root directory and install dependencies
 
 if you don't have npm yet, use `nvm` to install it.
 
+by that, I mean run `nvm install node` not 'npm'
+
 ### backend
 
 we use serverless for the bigelow backend. `npm install -g serverless`
