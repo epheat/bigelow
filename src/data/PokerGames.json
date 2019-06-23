@@ -1,0 +1,13 @@
+[
+    {
+        "date": "6/19/19",
+        "players": [
+            {"name": "Scott", "buyIn": 10, "cashOut": 40},
+            {"name": "Jack", "buyIn": 10, "cashOut": 20},
+            {"name": "Evan", "buyIn": 10, "cashOut": 0},
+            {"name": "Blake", "buyIn": 10, "cashOut": 0},
+            {"name": "Aaron", "buyIn": 10, "cashOut": 0},
+            {"name": "John", "buyIn": 10, "cashOut": 0}
+        ]
+    }
+]
