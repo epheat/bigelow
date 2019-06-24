@@ -1,8 +1,69 @@
 import React from 'react';
+import uuid from 'uuid/v4';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import BigelowSun from 'Assets/bigelow_sun.jpg';
 import BigelowSnow from 'Assets/bigelow_snow.jpg';
 import BigelowHero from '../components/BigelowHero';
+
+class Dot extends React.Component {
+    render() {
+        return (
+            <div
+                className="bigelow-circle"
+                onClick={this.props.onClick}
+            />
+        )
+    }
+}
+
+class DotContainer extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            dots: []
+        }
+    }
+    addDot = () => {
+        this.setState( prevState => {
+            return {
+                dots: [...prevState.dots, { id: uuid() }]
+            }
+        })
+    }
+    removeDot = (id) => {
+        console.log("remove");
+        this.setState( prevState => {
+            return {
+                dots: [...prevState.dots].filter( item => item.id !== id )
+            }
+        })
+    }
+    render() {
+        return (
+            <div className="dots">
+                <TransitionGroup className="flex-container">
+                        { 
+                            this.state.dots.map( ({ id }) => (
+                                <CSSTransition
+                                    key={id}
+                                    timeout={400}
+                                    classNames="fade"
+                                >        
+                                    <Dot
+                                        onClick={() => this.removeDot(id)}
+                                    />
+                                </CSSTransition>
+                            ))
+                        }
+                </TransitionGroup>
+                <div className="flex-container">
+                    <button onClick={this.addDot}>add a dot</button>
+                </div>
+            </div>
+        )
+    }
+} 
 
 class Home extends React.Component {
     constructor(props) {
@@ -45,16 +106,10 @@ class Home extends React.Component {
                         We hope you enjoy your stay. Click on the title to change the hero image.
                     </p>
                     <p>
-                        Eventually this site is going to have a bunch of cool stuff on here but for now its just a plain static site.
+                        Eventually this site is going to have a bunch of cool stuff on here but for now its basically just a plain static site.
                         
                     </p>
-                    <div className="flex-container">
-                        <div className="bigelow-circle" />
-                        <div className="bigelow-circle" />
-                        <div className="bigelow-circle" />
-                        <div className="bigelow-circle" />
-                        <div className="bigelow-circle" />
-                    </div>
+                    <DotContainer></DotContainer>
                     <p>
                         © 2019 Bigelow Boys
                     </p>
