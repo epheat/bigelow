@@ -21,21 +21,27 @@ class DotContainer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            tooManyDots: false,
             dots: []
         }
     }
     addDot = () => {
-        this.setState( prevState => {
-            return {
-                dots: [...prevState.dots, { id: uuid() }]
-            }
-        })
+        if (this.state.dots.length >= 30) {
+            this.setState({ tooManyDots: true })
+        } else {
+            this.setState( prevState => {
+                return {
+                    dots: [...prevState.dots, { id: uuid() }]
+                }
+            })
+        }
     }
     removeDot = (id) => {
         console.log("remove");
         this.setState( prevState => {
             return {
-                dots: [...prevState.dots].filter( item => item.id !== id )
+                dots: [...prevState.dots].filter( item => item.id !== id ),
+                tooManyDots: false
             }
         })
     }
@@ -58,7 +64,12 @@ class DotContainer extends React.Component {
                         }
                 </TransitionGroup>
                 <div className="flex-container">
-                    <button onClick={this.addDot}>add a dot</button>
+                    <button
+                        onClick={this.addDot}
+                        disabled={this.state.tooManyDots}
+                    >
+                        { this.state.tooManyDots ? "too many dots!" : "add a dot" }
+                    </button>
                 </div>
             </div>
         )
