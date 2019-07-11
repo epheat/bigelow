@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import { MdExpandMore, MdChevronRight } from 'react-icons/md';
 
+const MAX_DECIMAL_POINTS = 2;
+
 class PokerGame extends React.Component {
     constructor(props) {
         super(props);
@@ -17,11 +19,11 @@ class PokerGame extends React.Component {
     getPlayerTableRow(player) {
         // If they break even, default to black
         let profitStyle = '';
-        const profit = player.cashOut - player.buyIn;
+        const profit = (player.cashOut - player.buyIn).toFixed(MAX_DECIMAL_POINTS);
         let profitText = '0';
         if (profit > 0) {
             profitStyle = 'profit-gain';
-            profitText = profit;
+            profitText = parseFloat(profit);
         } else if (profit < 0) {
             profitStyle = 'profit-loss';
             profitText = '('.concat(Math.abs(profit)).concat(')');
