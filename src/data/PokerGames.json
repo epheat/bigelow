@@ -1,14 +1,12 @@
 [
     {
-        "date": "6/19/19",
-        "players": [
-            {"name": "Scott", "buyIn": 10, "cashOut": 40},
-            {"name": "Jack", "buyIn": 10, "cashOut": 20},
-            {"name": "Evan", "buyIn": 10, "cashOut": 0},
-            {"name": "Blake", "buyIn": 10, "cashOut": 0},
-            {"name": "Aaron", "buyIn": 10, "cashOut": 0},
-            {"name": "John", "buyIn": 10, "cashOut": 0}
-        ]
+	"date": "7/17/19",
+	"players": [
+	    {"name": "John", "buyIn": 5, "cashOut": 7.58},
+	    {"name": "Evan", "buyIn": 5, "cashOut": 3.92},
+	    {"name": "Jack", "buyIn": 5, "cashOut": 2.72},
+	    {"name": "Blake", "buyIn": 5, "cashOut": 5.78}
+	]
     },
     {
         "date": "7/10/19",
@@ -20,8 +18,19 @@
             {"name": "Elroy", "buyIn": 5, "cashOut": 0},
             {"name": "Emre", "buyIn": 5, "cashOut": 0},
             {"name": "Saurabh", "buyIn": 5, "cashOut": 0},
-            {"name": "John", "buyIn": 7, "cashOut": 0},
+            {"name": "John", "buyIn": 9, "cashOut": 0},
             {"name": "Jon", "buyIn": 15, "cashOut": 5.98}
+        ]
+    },
+    {
+        "date": "6/19/19",
+        "players": [
+            {"name": "Scott", "buyIn": 10, "cashOut": 40},
+            {"name": "Jack", "buyIn": 10, "cashOut": 20},
+            {"name": "Evan", "buyIn": 10, "cashOut": 0},
+            {"name": "Blake", "buyIn": 10, "cashOut": 0},
+            {"name": "Aaron", "buyIn": 10, "cashOut": 0},
+            {"name": "John", "buyIn": 10, "cashOut": 0}
         ]
     }
 ]
